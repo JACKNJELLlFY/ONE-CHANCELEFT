@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>ONE CHANCE</title> <!-- This is the tab name -->
+  <title>TPOT21 Animation</title>
   <style>
     html, body {
       height: 100%;
@@ -16,10 +16,24 @@
       max-height: 100%;
       object-fit: contain;
       display: block;
+      cursor: pointer; /* shows pointer when hovering */
     }
   </style>
 </head>
 <body>
-  <img src="Untitled-4.png" alt="TPOT21">
+  <img src="Untitled-4.png" alt="TPOT21" id="myImage">
+
+  <!-- Audio element -->
+  <audio id="mySound" src="sound.mp3"></audio>
+
+  <script>
+    const img = document.getElementById('myImage');
+    const sound = document.getElementById('mySound');
+
+    img.addEventListener('click', () => {
+      sound.currentTime = 0; // start from beginning
+      sound.play();
+    });
+  </script>
 </body>
 </html>
