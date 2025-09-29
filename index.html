@@ -16,23 +16,22 @@
       max-height: 100%;
       object-fit: contain;
       display: block;
-      cursor: pointer; /* shows pointer when hovering */
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
   <img src="Untitled-4.png" alt="TPOT21" id="myImage">
-
-  <!-- Audio element -->
   <audio id="mySound" src="sound.mp3"></audio>
-
   <script>
     const img = document.getElementById('myImage');
     const sound = document.getElementById('mySound');
-
     img.addEventListener('click', () => {
-      sound.currentTime = 0; // start from beginning
+      sound.currentTime = 0;
       sound.play();
+      sound.onended = () => {
+        window.location.href = "https://www.youtube.com/@BFDI";
+      };
     });
   </script>
 </body>
